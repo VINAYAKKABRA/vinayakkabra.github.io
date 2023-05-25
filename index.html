@@ -1,13 +1,157 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<title>Page Title</title>
-</head>
-<body>
+<html>
+  <head>
+    <title>Vinayak's Portfolio</title>
+    <style>
+      /* Set font, margins, padding, text color, and background color for body */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        color: #333; /* text color */
+        background-color: #f4f4f4; /* background color */
+      }
+      
+      /* Set background color, color, display properties, padding, and position for header */
+      header {
+        background-color: #333; /* navigation bar color */
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px; /* reduce size of navigation bar */
+        position: fixed; /* keep navigation bar visible when scrolling */
+        top: 0;
+        left: 0;
+        right: 0;
+      }
+      
+      /* Set margin and font size for header h1 */
+      header h1 {
+        margin: 0;
+        font-size: 24px; /* reduce size of "X's Portfolio" text */
+      }
+      
+      /* Set list style, margin, padding, and display properties for header nav ul */
+      header nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+      }
+      
+      /* Set margin for first child of header nav li */
+      header nav li:first-child {
+        margin-right:auto
+      }
+      
+      /* Set margin for header nav li */
+      header nav li {
+        margin-left: 20px;
+      }
+      
+      /* Set color and text decoration for header nav a */
+      header nav a {
+        color: #FFFFFF; /* navigation bar text color */
+        text-decoration: none;
+      }
+      
+      /* Set text decoration for hover state of header nav a */
+      header nav a:hover {
+        text-decoration: underline;
+      }
+      
+      /* Set padding for main */
+      main {
+        padding-top: 60px; /* add space for fixed navigation bar */
+      }
+      
+       #name {
+          display:none
+       }
 
-<h1>My First Heading</h1>
-<p>My first paragraph.</p>
-	<a href="about.html"><h2>Click here</h2>
+       /* Set max width, margin, and padding for #about-me */
+       #about-me {
+         max-width: 800px;
+         margin: 0 auto;
+         padding-top: 10px; /* reduce space between name and about me text */
+       }
 
-</body>
+       /* Set text alignment and font size for #about-me h2 */
+       #about-me h2 {
+         text-align:center; 
+         font-size:36px
+       }
+
+       /* Set max width, margin, padding top and background color for #work */
+       #work {
+         max-width: 800px;
+         margin: 0 auto;
+         padding-top:40px; 
+         background-color:#f4f4f4
+       }
+
+       /* Set margin top for #work h2 */
+       #work h2 {
+         margin-top: 0;
+       }
+
+       /* Set list style, margin, padding, display properties and gap for #work ul */
+       #work ul {
+         list-style:none; 
+         margin:auto; 
+         padding:.5rem; 
+         display:flex; 
+         flex-wrap:wrap; 
+         justify-content:center; 
+         align-items:center; 
+         gap:.5rem
+       }
+
+    </style>
+  </head>
+  
+  <body>
+    <!-- Header with navigation bar -->
+    <header>
+     <nav>
+       <ul>
+         <li><a href="index.html">Home</a></li>
+         <li><a href="resume.pdf">Resume</a></li>
+       </ul>
+     </nav>
+     <h1>Vinayak's Portfolio</h1>
+     <div></div> <!-- empty div to balance flexbox space-between -->
+    </header>
+
+    <!-- Main content -->
+    <main>
+
+     <!-- About Me section -->
+     <section id="about-me">
+        
+          <h2>Hi, I'm Vinayak Kabra!</h2> 
+          &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; a recent graduate with Master's in Computer Science from University of Illinois, Chicago.<br> 
+          &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; Primarily a UX Designer with a focus on user research to create meaningful experiences. 
+        
+     </section>
+
+     <!-- Work section -->
+     <section id="work">
+       <h2>Work</h2>
+       <ul>
+         <li><a href="campusbuddy.html"><img src="campus.PNG" width="40%" height="40%" alt="Campus Buddy"><br>Campus Buddy</a></li><br>
+         <li><a href="shoewizard.html"><img src="shoe.png" width="40%" height="40%" alt="Shoe Wizard"><br>Shoe Wizard</a></li><br>
+         <li><a href="rewardy.html"><img src="rewardy.PNG" width="40%" height="40%" alt="Rewardy"><br>Rewardy</a></li>
+         <!-- Add more case studies here -->
+       </ul>
+     </section>
+
+    </main>
+
+    <!-- Add footer here if desired -->
+    
+  </body>
+
 </html>
+

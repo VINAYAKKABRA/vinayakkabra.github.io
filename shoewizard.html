@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Shoe Wizard Case Study</title>
+    <style>
+      /* Set font, margins, padding, text color, and background color for body */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        color: #333; /* text color */
+        background-color: #f4f4f4; /* background color */
+      }
+      
+      /* Set background color, color, display properties, padding, and position for header */
+      header {
+        background-color: #333; /* navigation bar color */
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px; /* reduce size of navigation bar */
+        position: fixed; /* keep navigation bar visible when scrolling */
+        top: 0;
+        left: 0;
+        right: 0;
+      }
+      
+      /* Set margin and font size for header h1 */
+      header h1 {
+        margin: 0;
+        font-size: 24px; /* reduce size of "X's Portfolio" text */
+      }
+      
+      /* Set list style, margin, padding, and display properties for header nav ul */
+      header nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+      }
+      
+      /* Set margin for first child of header nav li */
+      header nav li:first-child {
+        margin-right:auto
+      }
+      
+      /* Set margin for header nav li */
+      header nav li {
+        margin-left: 20px;
+      }
+      
+      /* Set color and text decoration for header nav a */
+      header nav a {
+        color: #FFFFFF; /* navigation bar text color */
+        text-decoration: none;
+      }
+      
+      /* Set text decoration for hover state of header nav a */
+      header nav a:hover {
+        text-decoration: underline;
+      }
+      
+      /* Set padding for main */
+      main {
+        padding-top: 60px; /* add space for fixed navigation bar */
+      }
+      
+      #name {
+        display:none
+      }
+
+      /* Set max width, margin, and padding for #about-me */
+      #about-me {
+        max-width: 800px;
+        margin: 0 auto;
+        padding-top: 10px; /* reduce space between name and about me text */
+      }
+
+      /* Set text alignment and font size for #about-me h2 */
+      #about-me h2 {
+        text-align:center; 
+        font-size:36px
+      }
+
+      /* Set max width, margin, padding top and background color for #work */
+      #work {
+        max-width: 800px;
+        margin: 0 auto;
+        padding-top:40px; 
+        background-color:#f4f4f4
+      }
+
+      /* Set margin top for #work h2 */
+      #work h2 {
+        margin-top: 0;
+      }
+
+            /* Set list style, margin, padding, display properties and gap for #work ul */
+            #work ul {
+        list-style:none; 
+        margin:auto; 
+        padding:.5rem; 
+        display:flex; 
+        flex-wrap:wrap; 
+        justify-content:center; 
+        align-items:center; 
+        gap:.5rem;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: auto;
+      }
+
+      .container h2 {
+        text-align: center;
+      }
+
+      .grid 
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+      
+
+      .grid img {
+        flex-basis: calc(50% - 10px);
+        height: auto;
+        margin-bottom: 15px;
+        margin-right: 10px;
+      }
+
+      /* Dropdown styles */
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #333;
+        min-width: 160px;
+        z-index: 1;
+      }
+
+      .dropdown-content a {
+        color: #FFFFFF;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+    </style>
+  </head>
+  
+  <body>
+    <!-- Header with navigation bar -->
+    <header>
+      <nav>
+        <ul>
+          <li class="dropdown">
+            <a href="index.html">Home</a>
+            <div class="dropdown-content">
+              <a href="shoewizard.html">ShoeWizard</a>
+              <a href="campusbuddy.html">Campus Buddy</a>
+              <a href="rewardy.html">Rewardy</a>
+            </div>
+          </li>
+          <li><a href="resume.pdf">Resume</a></li>
+        </ul>
+      </nav>
+      <h1>Vinayak's Portfolio</h1>
+      <div></div> <!-- empty div to balance flexbox space-between -->
+    </header>
+
+    <!-- Main content -->
+    <main>
+
+      <!-- About Me section -->
+      <section id="about-me">
+        <h2>ShoeWizard</h2> 
+        <p>&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;  &emsp;A comparative shopping experience</p>
+      </section>
+
+      <!-- Case Study section -->
+      <section class="container">
+        <h3>INTRODUCTION</h3>
+        <p>ShoeWizard is a prototype meant to make online shopping for athletic shoes easier. Our main goal throughout this project was to ensure the user’s needs and requirements were met. Another goal of our project was to support the user in their sense-making task of buying shoes.
+          This project was done as a part of our project for course CS 522: Human-Computer Interaction, where we learned about sensemaking, ideation, meta-data, facets, etc. We were asked to design a website for a comparative shopping experience. We decided to limit the experience to shoes, as it is something everybody wears no matter the weather, function, or activity. And since everybody has different experiences, it was easier to gather user experiences and breakdowns for a specific product than for every product in general.</p>
+
+        <h3>MY ROLE</h3>
+        <p>Documentation, wireframe design, scenario design, storyboarding, script design, user study, and user feedback were all areas to which I contributed.</p>
+
+        <h3>DESIGN PROCESS</h3>
+        <p>The main goal of user interviews was to identify users' experiences while shopping online. We targeted an audience between the ages of 18 and 35. In total, we interviewed<strong> 11 people.</strong> Below is the data collected during the user study.</p>
+          <br>
+
+        <div class="grid">
+          <a href="ShoeWizard/affinity.jpg" target="_blank"><img src="ShoeWizard/affinity.jpg" alt=""></a>
+        </div>
+
+        <p>After collecting user data, we organized it, and based on user experiences and needs, we created <i>a wireframe</i> in Balsamiq, which can be seen below.</p>
+        
+        <div class="grid">
+          <a href="ShoeWizard/wire1.PNG" target="_blank"><img src="ShoeWizard/wire1.PNG" width="49%" height="49%" alt=""></a>
+          <a href="ShoeWizard/wire2.PNG" target="_blank"><img src="ShoeWizard/wire2.PNG" width="49%" height="49%" alt=""></a>
+          <a href="ShoeWizard/wire3.PNG" target="_blank"><img src="ShoeWizard/wire3.PNG" width="49%" height="49%" alt=""></a>
+          <a href="ShoeWizard/wire4.PNG" target="_blank"><img src="ShoeWizard/wire4.PNG" width="49%" height="49%" alt=""></a>
+          <center><a href="ShoeWizard/wire5.PNG" target="_blank"><img src="ShoeWizard/wire5.PNG" width="49%" height="49%" alt=""></a></center>
+        </div>
+
+        <p>We also created a lightweight prototype in Figma based on user needs and feedback. The lightweight prototype can be seen below.  </p>
+
+        <div class="grid">
+          <a href="ShoeWizard/light1.png" target="_blank"><img src="ShoeWizard/light1.png" width="49.5%" height="49.5%" alt=""></a>
+          <a href="ShoeWizard/light2.png" target="_blank"><img src="ShoeWizard/light2.png" width="49.5%" height="49.5%" alt=""></a>
+          <a href="ShoeWizard/light3.png" target="_blank"><img src="ShoeWizard/light3.png" width="49.5%" height="49.5%" alt=""></a>
+          <a href="ShoeWizard/light4.png" target="_blank"><img src="ShoeWizard/light4.png" width="49.5%" height="49.5%" alt=""></a>
+        </div>
+
+        <p><br>Feedback was taken from <strong>6 participants</strong> on the prototype. After organizing user feedback, we incorporated it into the functional prototype.</p>
+        
+        <h3>Scenario</h3>
+        <p>
+          Mark, an athlete, has always bought a certain brand of gym shoes but now wants to try something new. His friend from the gym recommends he use the “ShoeWizard” website to browse for new shoes. Mark really values a good price, the type of shoe, and the brand. He also wants to try the shoe on in person before buying it. When he opens ShoeWizard, he is directed to the home page, where he can select shoes by brand and activity. On the homepage, he can also see what shoes are available near him for his convenience to try on.
+          If he wants to search for a specific shoe, he can use the search bar. Using search, he can sort by price and filter by activity and price. When he clicks on a shoe, he will see pictures of the shoe, the height and width, the price, and the websites the shoe is available on (there is a price comparison here too). He can create lists for his specific activity and save his preferences/ favorites. He can create as many lists as he likes. He has narrowed his purchase down to 2 shoes after being able to compare the shoes using our features. He tries them on in person at Dick Sporting Goods and returns to our ShoeWizard after he sees that Finish Line has the pair he wants for cheaper.
+          
+          <h3>FUTURE WORK</h3>
+          The working prototype contains a fixed number of items because our main objective was to demonstrate our knowledge of the UX design process. Consequently, for future development, a broader selection of brands and items from a wider range of websites could be added to improve the comparative shopping experience.
+          
+          <h3>LEARNINGS</h3>
+          The user study provided us with a more in-depth understanding of user experiences and breakdowns. It assisted us in determining which aspects and meta-data were more important to users and their experiences with current sites. It demonstrated the significance of user research in understanding users’ needs and developing a functional website. Building prototypes enabled us to demonstrate our idea to people and obtain critical feedback for iterating the improvements into a functioning prototype.
+          Each phase in the design process was critical since the final result would have looked significantly different without it.</p>
+
+        </section>
+      </main>
+    </body>
+  </html>
+  

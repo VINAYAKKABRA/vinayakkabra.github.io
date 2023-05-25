@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rewardy Case Study</title>
+    <style>
+      /* Set font, margins, padding, text color, and background color for body */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        color: #333; /* text color */
+        background-color: #f4f4f4; /* background color */
+      }
+      
+      /* Set background color, color, display properties, padding, and position for header */
+      header {
+        background-color: #333; /* navigation bar color */
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px; /* reduce size of navigation bar */
+        position: fixed; /* keep navigation bar visible when scrolling */
+        top: 0;
+        left: 0;
+        right: 0;
+      }
+      
+      /* Set margin and font size for header h1 */
+      header h1 {
+        margin: 0;
+        font-size: 24px; /* reduce size of "X's Portfolio" text */
+      }
+      
+      /* Set list style, margin, padding, and display properties for header nav ul */
+      header nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+      }
+      
+      /* Set margin for first child of header nav li */
+      header nav li:first-child {
+        margin-right:auto
+      }
+      
+      /* Set margin for header nav li */
+      header nav li {
+        margin-left: 20px;
+      }
+      
+      /* Set color and text decoration for header nav a */
+      header nav a {
+        color: #FFFFFF; /* navigation bar text color */
+        text-decoration: none;
+      }
+      
+      /* Set text decoration for hover state of header nav a */
+      header nav a:hover {
+        text-decoration: underline;
+      }
+      
+      /* Set padding for main */
+      main {
+        padding-top: 60px; /* add space for fixed navigation bar */
+      }
+      
+      #name {
+        display:none
+      }
+
+      /* Set max width, margin, and padding for #about-me */
+      #about-me {
+        max-width: 800px;
+        margin: 0 auto;
+        padding-top: 10px; /* reduce space between name and about me text */
+      }
+
+      /* Set text alignment and font size for #about-me h2 */
+      #about-me h2 {
+        text-align:center; 
+        font-size:36px
+      }
+
+      /* Set max width, margin, padding top and background color for #work */
+      #work {
+        max-width: 800px;
+        margin: 0 auto;
+        padding-top:40px; 
+        background-color:#f4f4f4
+      }
+
+      /* Set margin top for #work h2 */
+      #work h2 {
+        margin-top: 0;
+      }
+
+            /* Set list style, margin, padding, display properties and gap for #work ul */
+            #work ul {
+        list-style:none; 
+        margin:auto; 
+        padding:.5rem; 
+        display:flex; 
+        flex-wrap:wrap; 
+        justify-content:center; 
+        align-items:center; 
+        gap:.5rem;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: auto;
+      }
+
+      .container h2 {
+        text-align: center;
+      }
+
+      .grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .grid img {
+        flex-basis: calc(25% - 10px);
+        height: auto;
+        margin-bottom: 15px;
+        margin-right: 10px;
+    }
+
+
+      /* Dropdown styles */
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #333;
+        min-width: 160px;
+        z-index: 1;
+      }
+
+      .dropdown-content a {
+        color: #FFFFFF;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      .font1 {
+        font-family: 'Arial', sans-serif;
+        line-height: 1.5;
+        font-size: 16px;
+      }
+
+
+    </style>
+  </head>
+  
+  <body>
+    <!-- Header with navigation bar -->
+    <header>
+      <nav>
+        <ul>
+          <li class="dropdown">
+            <a href="index.html">Home</a>
+            <div class="dropdown-content">
+              <a href="shoewizard.html">ShoeWizard</a>
+              <a href="campusbuddy.html">Campus Buddy</a>
+              <a href="rewardy.html">Rewardy</a>
+            </div>
+          </li>
+          <li><a href="resume.pdf">Resume</a></li>
+        </ul>
+      </nav>
+      <h1>Vinayak's Portfolio</h1>
+      <div></div> <!-- empty div to balance flexbox space-between -->
+    </header>
+
+    <!-- Main content -->
+    <main>
+
+      <!-- About Me section -->
+      <section id="about-me">
+        <h2>Rewardy</h2> 
+        <p> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;Earn passive income using debit card</p>
+      </section>
+
+      <!-- Case Study section -->
+      <section class="container">
+        <h2></h2>
+        <p>My first exposure to HCI was during my undergraduate studies, and I was immediately drawn to the topic because it involved understanding human behavior for better design and it introduced me to Norman’s Design Principles. As a result, I opted for CS 422: User Interface Design and Programming when I had the option to choose courses offered at the University of Illinois, Chicago (UIC). I learned a lot of new concepts throughout the course, including personas, brainstorming, scenarios, focus groups, how to conduct them, affinity diagrams, etc. My final project for this coursework involved all these techniques.</p>
+
+        <h3>INTRODUCTION</h3>
+        <p>
+            We had to redesign a solution from scratch for one of the startup ideas. We chose "Rewardy", a debit card that gives rewards when used, as our final project. As international students without SSNs, we are forced to use debit cards and thus miss out on cashback and rewards given by credit cards. This was our motivation to design a solution for the issue.</p>
+          
+        <h3>DESIGN PROCESS</h3>
+        <p>
+            To collect data, we conducted focus groups and personal interviews with <strong>a total of 9 users</strong> Some general questions we asked were about their preferences between credit cards and debit cards, their experiences, and their reasons for choosing one over the other. 
+            Based on the data collected, we created an affinity diagram which can be seen below</p>
+
+        <div class="grid">
+            <a href="Rewardy/affinity.jpg" target="_blank"><img src="Rewardy/affinity.jpg" width="100%" height="100%" alt=""></a>
+        </div>
+
+
+        <p>After analyzing the collected data, we then created personas which can be seen below.</p>
+            <div class="grid">
+              <a href="Rewardy/persona1.jpg" target="_blank"><img src="Rewardy/persona1.jpg" width="100%" height="100%" alt=""></a>
+              <a href="Rewardy/persona2.jpg" target="_blank"><img src="Rewardy/persona2.jpg" width="100%" height="100%" alt=""></a>
+            </div>
+
+        <h3>SCENARIOS</h3>
+
+        <p>One of the scenarios based on persona is:<br><br></p>
+            <p class="font1"><i><u>Priyanka</u></i>: Priyanka, an international student, is in the USA on an F1 visa. Currently, she doesn’t have any on-campus jobs. Thus, she attends lectures and is very active in a lot of different club activities. In her free time, she browses and shops on different shopping websites. As she is on an F1 visa and has no on-campus job, she can’t apply for SSN. As she has no SSN, she can’t apply for a credit card and is forced to use a normal debit card without rewards, but with our “Rewardy Debit Card”, she can shop and earn rewards. Being a shopaholic, she can spend without worrying about interest, debt, or her credit score, as she can only spend the amount that was deposited in her account. As there is no minimum balance requirement and a low balance fee, she can wait for a few days if there is a delay in her money order from her country without stressing about interest charges. Also, an easy and intuitive UI will show her account and transaction information. Furthermore, she explores a lot of new restaurants and shops from various brands. “Rewardy” provides discounts and offers that might interest her. A lot of features and rewards will tempt her to use a “Rewardy Debit Card” instead of a normal debit card with no rewards or offers.</p>
+         
+        <h3>STORYBOARD</h3>
+            
+        <div class="grid">
+            <a href="Rewardy/story1.jpeg" target="_blank"><img src="Rewardy/story1.jpeg" width="120%" height="120%" alt=""></a>
+          </div>
+          
+        <p><i><b>Another storyboard that was created based on the scenario of overspending can be seen below. </b></i></p>  
+        <div class="grid">
+            <a href="Rewardy/story2.jpg" target="_blank"><img src="Rewardy/story2.jpg" width="100%" height="100%" alt=""></a>
+            <a href="Rewardy/story3.jpg" target="_blank"><img src="Rewardy/story3.jpg" width="100%" height="100%" alt=""></a>
+        </div>
+          
+        <p><i><br><b>Next, we created a wireframe which can be seen below:</b></i></p>  
+
+        <div class="grid">
+            <a href="Rewardy/wire1.jpeg" target="_blank"><img src="Rewardy/wire1.jpeg" width="110%" height="100%" alt=""></a>
+            <a href="Rewardy/wire2.png" target="_blank"><img src="Rewardy/wire2.png" width="110%" height="110%" alt=""></a>
+        </div>
+
+        <p><strong><i>Based on the feedback received on the wireframes, we created our high fidility prototype.</i></strong></p>
+        <p>Screens below show login page, welcome page and account page.</p>
+        <div class="grid">
+            <a href="Rewardy/hifi3.png" target="_blank"><img src="Rewardy/hifi3.png" width="100%" height="90%" alt=""></a>
+            <a href="Rewardy/hifi2.png" target="_blank"><img src="Rewardy/hifi2.png" width="70%" height="70%" alt=""></a>
+            <a href="Rewardy/hifi3.png" target="_blank"><img src="Rewardy/hifi1.png" width="100%" height="90%" alt=""></a>
+        </div>
+        
+        <p><h3>MY ROLE</h3>
+            
+            I contributed to conducting focus groups, affinity diagrams, user personas, scenarios, storyboarding, wireframes, and user feedback.
+            <h3>MY LEARNINGS</h3>
+            This project provided us with an opportunity to apply the knowledge and skills we gained during the course. We conducted focus groups to gather valuable data, utilized affinity diagrams to analyze the data and understand user needs, employed storyboarding to identify user pain points, and created wireframes to visualize the layout and interface of our interactive prototype and website. Each step of the project allowed us to gain practical experience and apply what we had learned. It was an exciting and fulfilling learning journey. </p>
+
+        </section>
+      </main>
+    </body>
+  </html>
+  

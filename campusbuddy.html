@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Campus Buddy Case Study</title>
+    <style>
+      /* Set font, margins, padding, text color, and background color for body */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        color: #333; /* text color */
+        background-color: #f4f4f4; /* background color */
+      }
+      
+      /* Set background color, color, display properties, padding, and position for header */
+      header {
+        background-color: #333; /* navigation bar color */
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px; /* reduce size of navigation bar */
+        position: fixed; /* keep navigation bar visible when scrolling */
+        top: 0;
+        left: 0;
+        right: 0;
+      }
+      
+      /* Set margin and font size for header h1 */
+      header h1 {
+        margin: 0;
+        font-size: 24px; /* reduce size of "X's Portfolio" text */
+      }
+      
+      /* Set list style, margin, padding, and display properties for header nav ul */
+      header nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+      }
+      
+      /* Set margin for first child of header nav li */
+      header nav li:first-child {
+        margin-right:auto
+      }
+      
+      /* Set margin for header nav li */
+      header nav li {
+        margin-left: 20px;
+      }
+      
+      /* Set color and text decoration for header nav a */
+      header nav a {
+        color: #FFFFFF; /* navigation bar text color */
+        text-decoration: none;
+      }
+      
+      /* Set text decoration for hover state of header nav a */
+      header nav a:hover {
+        text-decoration: underline;
+      }
+      
+      /* Set padding for main */
+      main {
+        padding-top: 60px; /* add space for fixed navigation bar */
+      }
+      
+      #name {
+        display:none
+      }
+
+      /* Set max width, margin, and padding for #about-me */
+      #about-me {
+        max-width: 800px;
+        margin: 0 auto;
+        padding-top: 10px; /* reduce space between name and about me text */
+      }
+
+      /* Set text alignment and font size for #about-me h2 */
+      #about-me h2 {
+        text-align:center; 
+        font-size:36px
+      }
+
+      /* Set max width, margin, padding top and background color for #work */
+      #work {
+        max-width: 800px;
+        margin: 0 auto;
+        padding-top:40px; 
+        background-color:#f4f4f4
+      }
+
+      /* Set margin top for #work h2 */
+      #work h2 {
+        margin-top: 0;
+      }
+
+            /* Set list style, margin, padding, display properties and gap for #work ul */
+            #work ul {
+        list-style:none; 
+        margin:auto; 
+        padding:.5rem; 
+        display:flex; 
+        flex-wrap:wrap; 
+        justify-content:center; 
+        align-items:center; 
+        gap:.5rem;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: auto;
+      }
+
+      .container h2 {
+        text-align: center;
+      }
+
+      .grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .grid img {
+        flex-basis: calc(25% - 10px);
+        height: auto;
+        margin-bottom: 15px;
+        margin-right: 10px;
+    }
+
+
+      /* Dropdown styles */
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #333;
+        min-width: 160px;
+        z-index: 1;
+      }
+
+      .dropdown-content a {
+        color: #FFFFFF;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+    </style>
+  </head>
+  
+  <body>
+    <!-- Header with navigation bar -->
+    <header>
+      <nav>
+        <ul>
+          <li class="dropdown">
+            <a href="index.html">Home</a>
+            <div class="dropdown-content">
+              <a href="shoewizard.html">ShoeWizard</a>
+              <a href="campusbuddy.html">Campus Buddy</a>
+              <a href="rewardy.html">Rewardy</a>
+            </div>
+          </li>
+          <li><a href="resume.pdf">Resume</a></li>
+        </ul>
+      </nav>
+      <h1>Vinayak's Portfolio</h1>
+      <div></div> <!-- empty div to balance flexbox space-between -->
+    </header>
+
+    <!-- Main content -->
+    <main>
+
+      <!-- About Me section -->
+      <section id="about-me">
+        <h2>Campus Buddy</h2> 
+        <p> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;Make friends on campus</p>
+      </section>
+
+      <!-- Case Study section -->
+      <section class="container">
+        <h2></h2>
+        <p>I chose to take CS 522: Human-Computer Interaction during my third semester at the University of Illinois, Chicago (UIC). “Campus Buddy” was our final project for the course. We study several research articles during the course on a variety of subjects, including “Color,” “Graphic Space,” “Conceptual Models,” etc. We attempted to include new ideas and terminology, such as “meta-data,” “annotations,” etc., into our project.
+
+        <h3>INTRODUCTION</h3>
+        <p>
+          Campus Buddy aims to undo the social effects of the pandemic by eliminating social barriers between students on university campuses and helping to improve social and mental conditions for students. We aim to develop a website to help connect and increase social interaction between not only students who live on campus, but also students who live off campus and commuter students.
+          In our group of four, while one of us found it easy to make friends and meet new people as he was part of a “table tennis club," the other three of us struggled to make friends on campus. This motivated us to create a platform for students where they can meet other students with similar interests, as that would be an icebreaker.</p>
+
+          <h3>DESIGN PROCESS</h3>
+        <p>
+          The first step was to identify users and start collecting data. Since it was for students of UIC, we decided to interview students pursuing different degrees, such as undergrad, graduate, and Ph.D. Another critical criterion was that we interviewed students who lived on campus, near campus, or commuted. It was to make sure we had the experience of students from all different backgrounds and reduce bias. We conducted personal interviews with eight students.
+        
+        <p><strong>A few questions we asked our users to collect data are:</strong><br>
+          a. How has your experience been so far in making friends at the university? What challenges have you faced?<br>
+          b. How different is your experience meeting new people and making friends at the university than at high school?<br>
+          c. Are you a part of any clubs? <br>
+                      i.  If yes, ask how that has helped you to make friends.<br>
+                      ii. If not, what is the reason behind not being a part of any clubs?<br><br>
+          Through data collection, we were able to confirm that other students have faced social hardships at UIC during, and after the pandemic. It also gave us feedback and things to consider while creating our prototype.
+
+          <h3>Specific User Scenario</h3>
+          <p><strong> Sunny, an international student:</strong><br>
+                        Sunny is an international student from India who lives on campus with other Indian students. He is a master's student and primarily interacts with other international master's students, but he wants to meet other students who are like him and like to play Warzone. His roommate informs him about the application ‘Campus Buddy," which has a gaming community and allows other gamers on campus to meet each other. Sunny decides to create an account using his UIC UIN and password, and he puts on his profile that he is looking for gaming friends of all backgrounds. He joins the gaming page on ‘Campus Buddy’, and finds friends to play Warzone with. After playing the game together for a while, they decide to schedule a meeting using the meeting feature on "Campus Buddy," and they have dinner together near campus.
+            <br><br>
+            One of the storyboards can be seen in the image below:
+          </p>
+
+            <div class="grid">
+              <a href="Campus/story1.PNG" target="_blank"><img src="Campus/story1.PNG" width="50%" height="50%" alt=""></a>
+              <a href="Campus/story2.PNG" target="_blank"><img src="Campus/story2.PNG" width="50%" height="50%" alt=""></a>
+              <a href="Campus/story3.PNG" target="_blank"><img src="Campus/story3.PNG" width="50%" height="50%" alt=""></a>
+            </div>
+
+        <h3>Prototype</h3>
+        <p>After collecting user data, we built a lightweight prototype, keeping in mind the user's needs. 
+          <br><br><i>Below is an image showing the lightweight prototype of Campus Buddy.</i></p>
+          
+          <div class="grid">
+            <a href="Campus/lightweight.png" target="_blank"><img src="Campus/lightweight.png" width="100%" height="100%" alt=""></a>
+          </div>
+          
+        <p>In the next step, user testing was conducted on <b><i>eight participants</i></b> for feedback. A lot of useful data was gathered, and based on that, the design was iterated. <b><i> second user study</i></b> was conducted to gather more feedback on the iterated design. For the next step, we started working on our functional prototype, incorporating the feedback received from the second user study.</p>  
+          
+        <p><i>Below is some of the data that we collected from our first user study (first user testing on lightweight prototype):​​​​​​​​​​​​​​ </i></p>
+
+        <div class="grid">
+          <a href="Campus/feedback.jpg" target="_blank"><img src="Campus/feedback.jpg" width="100%" height="100%" alt=""></a>
+        </div>
+
+        <p><i>Below is a snippet of data from our second user study: </i></p>
+
+        <div class="grid">
+          <a href="Campus/secondfeedback.png" target="_blank"><img src="Campus/secondfeedback.png" width="100%" height="100%" alt=""></a>
+        </div>
+
+        <p><i>An overview of the functional prototype is shown below for pages "Events", "Explore" and "Profile".</i></p>
+
+        <div class="grid">
+          <a href="Campus/functional2.PNG" target="_blank"><img src="Campus/functional2.PNG" width="100%" height="100%" alt=""></a>
+          <a href="Campus/functional1.PNG" target="_blank"><img src="Campus/functional1.PNG" width="100%" height="100%" alt=""></a>
+          <a href="Campus/functional3.png" target="_blank"><img src="Campus/functional3.png" width="100%" height="100%" alt=""></a>
+        </div>
+
+        <h3>MY ROLE</h3>
+
+        <p>I contributed to documentation, designing wireframes, doing multiple user studies, user scenarios, storyboarding, designing personas, and getting input from users on prototypes.</p>
+
+        <h3>CONCLUSION AND LEARNINGS</h3>
+
+        <p>We discovered from prior studies and our user study that students who participate in clubs or sports find it easier to meet other people and make new friends. As user needs and experiences differed slightly from what I initially believed user needs must be, we were once again reminded of the value of doing user studies.</p>
+
+        </section>
+      </main>
+    </body>
+  </html>
+  
