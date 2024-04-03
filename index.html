@@ -1,157 +1,368 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vinayak's Portfolio</title>
-    <style>
-      /* Set font, margins, padding, text color, and background color for body */
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        color: #333; /* text color */
-        background-color: #f4f4f4; /* background color */
-      }
-      
-      /* Set background color, color, display properties, padding, and position for header */
-      header {
-        background-color: #333; /* navigation bar color */
-        color: white;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px; /* reduce size of navigation bar */
-        position: fixed; /* keep navigation bar visible when scrolling */
-        top: 0;
-        left: 0;
-        right: 0;
-      }
-      
-      /* Set margin and font size for header h1 */
-      header h1 {
-        margin: 0;
-        font-size: 24px; /* reduce size of "Portfolio" text */
-      }
-      
-      /* Set list style, margin, padding, and display properties for header nav ul */
-      header nav ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-      }
-      
-      /* Set margin for first child of header nav li */
-      header nav li:first-child {
-        margin-right:auto
-      }
-      
-      /* Set margin for header nav li */
-      header nav li {
-        margin-left: 20px;
-      }
-      
-      /* Set color and text decoration for header nav a */
-      header nav a {
-        color: #FFFFFF; /* navigation bar text color */
-        text-decoration: none;
-      }
-      
-      /* Set text decoration for hover state of header nav a */
-      header nav a:hover {
-        text-decoration: underline;
-      }
-      
-      /* Set padding for main */
-      main {
-        padding-top: 60px; /* add space for fixed navigation bar */
-      }
-      
-       #name {
-          display:none
-       }
-
-       /* Set max width, margin, and padding for #about-me */
-       #about-me {
-         max-width: 800px;
-         margin: 0 auto;
-         padding-top: 10px; /* reduce space between name and about me text */
-       }
-
-       /* Set text alignment and font size for #about-me h2 */
-       #about-me h2 {
-         text-align:center; 
-         font-size:36px
-       }
-
-       /* Set max width, margin, padding top and background color for #work */
-       #work {
-         max-width: 800px;
-         margin: 0 auto;
-         padding-top:40px; 
-         background-color:#f4f4f4
-       }
-
-       /* Set margin top for #work h2 */
-       #work h2 {
-         margin-top: 0;
-       }
-
-       /* Set list style, margin, padding, display properties and gap for #work ul */
-       #work ul {
-         list-style:none; 
-         margin:auto; 
-         padding:.5rem; 
-         display:flex; 
-         flex-wrap:wrap; 
-         justify-content:center; 
-         align-items:center; 
-         gap:.5rem
-       }
-
-    </style>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
   </head>
-  
   <body>
-    <!-- Header with navigation bar -->
-    <header>
-     <nav>
-       <ul>
-         <li><a href="index.html">Home</a></li>
-         <li><a href="Resume_UX.pdf">Resume</a></li>
-       </ul>
-     </nav>
-     <h1>Vinayak's Portfolio</h1>
-     <div></div> <!-- empty div to balance flexbox space-between -->
-    </header>
-
-    <!-- Main content -->
-    <main>
-
-     <!-- About Me section -->
-     <section id="about-me">
-        
-          <h2>Hi, I'm Vinayak Kabra!</h2> 
-          &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; A graduate from University of Illinois, Chicago with Master's in Computer Science. <br> 
-          &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; Primarily a UX Designer with a focus on user research to create meaningful experiences. 
-        
-     </section>
-
-     <!-- Work section -->
-     <section id="work">
-       <h2>Work</h2>
-       <ul>
-         <li><a href="campusbuddy.html"><img src="campus.PNG" width="40%" height="40%" alt="Campus Buddy"><br>Campus Buddy</a></li><br>
-         <li><a href="shoewizard.html"><img src="shoe.png" width="40%" height="40%" alt="Shoe Wizard"><br>Shoe Wizard</a></li><br>
-         <li><a href="rewardy.html"><img src="rewardy.PNG" width="40%" height="40%" alt="Rewardy"><br>Rewardy</a></li>
-         <!-- Add more case studies here -->
-       </ul>
-     </section>
-
-    </main>
-
-    <!-- Add footer here if desired -->
-    
+    <nav id="desktop-nav">
+      <div class="logo">Vinayak Kabra</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Vinayak Kabra</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <!--
+        <div class="section__pic-container">
+        <img src="./assets/profile-pic.png" alt="Vinayak Kabra profile picture" />
+      </div>
+      !-->
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Vinayak Kabra</h1>
+        <p class="section__text__p2">A UX Designer and Data Analyst.</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/Resume_UX.pdf')"
+          >
+            Download CV
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="location.href='https://linkedin.com/in/vinayakkabra/'"
+          />
+          <img
+            src="./assets/github.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="location.href='https://github.com/vinayakkabra'"
+          />
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <!--
+        <div class="section__pic-container">
+          <img
+            src="./assets/about-pic.png"
+            alt="Profile picture"
+            class="about-pic"
+          />
+        </div>
+        -->
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/experience.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3>Experience</h3>
+              <p>2+ years <br />UX Designer</p>
+            </div>
+            <div class="details-container">
+              <img
+                src="./assets/education.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Education</h3>
+              <p>Masters in Computer Science<br /></p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+              I am a recent graduate from University of Illinois, Chicago with Masters in Computer Science. My interest areas are Data Analysis and UX Design. Throughout my academics I have worked on multiple projects and as a Research Assistant at UIC. As a Research Assistant, I led focus grouos and usability tests to shape user-centric product development. I have also completed multiple projects to showcase my skills. I am excited to further develop my skills.  
+            </p>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#experience'"
+      />
+    </section>
+    <section id="experience">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Experience</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">UX</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Wireframing</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>A/B Testing</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Affinity Diagram</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Focus Group</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Prototyping</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>HTML/CSS</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="details-container">
+            <h2 class="experience-sub-title">Tools</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Balsmiq</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Miro</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Adobe Photoshop</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Figma</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#projects'"
+      />
+    </section>
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/campus.png"
+                alt="Project 1"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Campus Buddy</h2>
+            
+            <div class="btn-container">
+              
+              
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='campusbuddy.html'"
+              >
+                Details
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/shoe.png"
+                alt="Project 2"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Shoe Wizard</h2>
+            <div class="btn-container">
+             
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='shoewizard.html'"
+              >
+                Details
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/rewardy.PNG"
+                alt="Project 3"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Rewardy</h2>
+            <div class="btn-container">
+             
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='rewardy.html'"
+              >
+                Details
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#contact'"
+      />
+    </section>
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:kabravinayak@gmail.com">kabravinayak@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com/in/vinayakkabra/">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Osa&#169; Vinayak Kabra. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
   </body>
-
 </html>
-
